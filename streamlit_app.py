@@ -39,4 +39,8 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_data_rows = my_cur.fetchall()
 streamlit.header("Hello from Snowflake:")
-streamlit.dataframe(my_data_row)
+streamlit.dataframe(my_data_rows)
+
+add_my_fruit = streamlit.text_input('What fruit would you like to add?','Kiwi')
+streamlit.write('The user entered ', add_my_fruit)
+
